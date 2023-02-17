@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.hanna.agriculture.activity.EditFieldActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="1dip"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title_hint"
+            android:gravity="center_vertical"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/title_hint"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:maxLength="24"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColorHint="#757575"
+            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dip"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/location_tv"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/location_hint"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/location_hint"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:maxLength="24"
+            android:textColorHint="#757575"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dip"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/size_tv"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/size_hint"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
+
+        <EditText
+            android:id="@+id/size"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/size_hint"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:maxLength="24"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColorHint="#757575"
+            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dip"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/isSown_tv"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="@string/isSown_hint"
+            android:gravity="center_vertical"
+            android:textAppearance="@android:style/TextAppearance.Medium"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/yesButton"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:onClick="isSownClickYes"
+                android:text="@string/yes_hint"
+                tools:ignore="TouchTargetSizeCheck,UsingOnClickInXml" />
+
+            <RadioButton
+                android:id="@+id/noButton"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:onClick="isSownClickNo"
+                android:text="@string/no_hint"
+                tools:ignore="TouchTargetSizeCheck,UsingOnClickInXml" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dip"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/whatIsSown_tv"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="@string/whatIsSown_hint"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
+
+        <EditText
+            android:id="@+id/whatIsSown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="@string/whatIsSown_hint"
+            android:inputType="text"
+            android:textColorHint="#757575"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck,TextContrastCheck"
+            android:importantForAutofill="no" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/colorPrimary"
+        android:label="@string/image_icon"
+        android:contentDescription="@string/photo_hint"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="1dip"
+        android:layout_marginTop="1dp">
+
+        <ImageButton
+            android:id="@+id/add_image_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:background="@android:drawable/ic_menu_camera"
+            android:contentDescription="@string/addPhoto_hint"
+            android:onClick="addPhoto"
+            tools:ignore="UsingOnClickInXml" />
+
+
+        <ImageButton
+            android:id="@+id/cancel_image_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:background="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="@string/deletePhoto_hint"
+            android:onClick="deletePhoto"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/delete_field_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:onClick="deleteField"
+            android:text="@string/delete_field"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            tools:ignore="UsingOnClickInXml" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dip"
+        android:layout_marginTop="1dp">
+
+        <Button
+            android:id="@+id/save_field_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25"
+            android:onClick="saveField"
+            android:text="@string/save"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            tools:ignore="UsingOnClickInXml" />
+
+    </LinearLayout>
+</LinearLayout>

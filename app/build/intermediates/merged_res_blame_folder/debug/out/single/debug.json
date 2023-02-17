@@ -1,0 +1,110 @@
+[
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.hanna.agriculture.app-main-27:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.hanna.agriculture.app-main-27:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.hanna.agriculture.app-main-27:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.hanna.agriculture.app-main-27:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.hanna.agriculture.app-main-27:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/layout_field_list_field.xml.flat",
+        "source": "com.hanna.agriculture.app-main-27:/layout/field_list_field.xml"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/layout_activity_edit_field.xml.flat",
+        "source": "com.hanna.agriculture.app-main-27:/layout/activity_edit_field.xml"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.hanna.agriculture.app-main-27:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.hanna.agriculture.app-main-27:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/drawable_ic_category_icon.xml.flat",
+        "source": "com.hanna.agriculture.app-main-27:/drawable/ic_category_icon.xml"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.hanna.agriculture.app-main-27:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.hanna.agriculture.app-main-27:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.hanna.agriculture.app-main-27:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/layout_all_fields_activity.xml.flat",
+        "source": "com.hanna.agriculture.app-main-27:/layout/all_fields_activity.xml"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/layout_activity_main.xml.flat",
+        "source": "com.hanna.agriculture.app-main-27:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.hanna.agriculture.app-main-27:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/font_montserrat_alternates_bold.xml.flat",
+        "source": "com.hanna.agriculture.app-main-27:/font/montserrat_alternates_bold.xml"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/layout_category_item.xml.flat",
+        "source": "com.hanna.agriculture.app-main-27:/layout/category_item.xml"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/drawable_ic_edit.xml.flat",
+        "source": "com.hanna.agriculture.app-main-27:/drawable/ic_edit.xml"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/drawable_ic_settings.xml.flat",
+        "source": "com.hanna.agriculture.app-main-27:/drawable/ic_settings.xml"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.hanna.agriculture.app-main-27:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/font_montserrat.xml.flat",
+        "source": "com.hanna.agriculture.app-main-27:/font/montserrat.xml"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.hanna.agriculture.app-main-27:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/drawable_ic_main_icon.xml.flat",
+        "source": "com.hanna.agriculture.app-main-27:/drawable/ic_main_icon.xml"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/layout_activity_add_field.xml.flat",
+        "source": "com.hanna.agriculture.app-main-27:/layout/activity_add_field.xml"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/drawable_ic_add_circle.xml.flat",
+        "source": "com.hanna.agriculture.app-main-27:/drawable/ic_add_circle.xml"
+    },
+    {
+        "merged": "com.hanna.agriculture.app-merged_res-25:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.hanna.agriculture.app-main-27:/mipmap-xhdpi/ic_launcher.webp"
+    }
+]

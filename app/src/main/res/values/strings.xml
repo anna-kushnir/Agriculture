@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Agriculture</string>
+    <string name="fields_text">Поля</string>
+    <string name="main_text">Головна</string>
+    <string name="logo_of_app_1">Agri</string>
+    <string name="logo_of_app_2">Culture</string>
+
+    <string name="text_sowing">Посів</string>
+
+    <string name="text_settings">Налаштування</string>
+    <string name="text_menuStart">Початок меню</string>
+
+
+    <string name="keyword">Введіть ключове слово</string>
+
+    <string name="title_hint">Назва</string>
+    <string name="size_hint">Розмір</string>
+    <string name="location_hint">Розташування</string>
+    <string name="isSown_hint">Засіяне</string>
+    <string name="whatIsSown_hint">Чим засіяне</string>
+
+    <string name="save">Зберегти</string>
+    <string name="delete_field">Видалити поле</string>
+    <string name="edit_field">Редагувати поле</string>
+    <string name="login">Увійти</string>
+
+    <string name="edit_profile">Редагувати профіль</string>
+    <string name="search">Пошук</string>
+    <string name="logout">Вийти</string>
+
+    <string name="image_icon">Значок зображення</string>
+
+    <string name="yes_hint">Так</string>
+    <string name="no_hint">Ні</string>
+    <string name="addField_hint">Додати поле</string>
+    <string name="addPhoto_hint">Додати фото</string>
+    <string name="deletePhoto_hint">Видалити фото</string>
+    <string name="photo_hint">Фото поля</string>
+
+</resources>

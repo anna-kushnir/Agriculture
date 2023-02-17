@@ -1,0 +1,142 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.hanna.agriculture"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml
+10
+11    <application
+11-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:4:5-56:19
+12        android:allowBackup="true"
+12-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:5:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.7.0] C:\Users\annak\.gradle\caches\transforms-3\32b22ae24ddd49268bb45350efca99f0\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+14        android:debuggable="true"
+15        android:icon="@mipmap/ic_launcher"
+15-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:6:9-43
+16        android:label="@string/app_name"
+16-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:7:9-41
+17        android:roundIcon="@mipmap/ic_launcher_round"
+17-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:8:9-54
+18        android:supportsRtl="true"
+18-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:9:9-35
+19        android:testOnly="true"
+20        android:theme="@style/Theme.Agriculture" >
+20-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:10:9-49
+21        <activity
+21-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:11:9-19:20
+22            android:name="com.hanna.agriculture.MainActivity"
+22-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:12:13-41
+23            android:exported="true" >
+23-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:13:13-36
+24            <intent-filter>
+24-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:14:13-18:29
+25                <action android:name="android.intent.action.MAIN" />
+25-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:15:17-69
+25-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:15:25-66
+26
+27                <category android:name="android.intent.category.LAUNCHER" />
+27-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:17:17-77
+27-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:17:27-74
+28            </intent-filter>
+29        </activity>
+30        <activity
+30-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:20:9-30:20
+31            android:name="com.hanna.agriculture.activity.AllFieldsActivity"
+31-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:21:13-76
+32            android:exported="true"
+32-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:24:13-36
+33            android:label="AllFieldsActivity"
+33-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:22:13-46
+34            android:theme="@style/Theme.Design.NoActionBar" >
+34-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:23:13-60
+35            <intent-filter>
+35-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:25:13-29:29
+36                <action android:name="om.hanna.agriculture.activity.AllFieldsActivity" />
+36-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:26:17-90
+36-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:26:25-87
+37
+38                <category android:name="android.intent.category.DEFAULT" />
+38-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:28:17-76
+38-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:28:27-73
+39            </intent-filter>
+40        </activity>
+41        <activity
+41-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:31:9-41:20
+42            android:name="com.hanna.agriculture.activity.AddFieldActivity"
+42-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:32:13-75
+43            android:exported="true"
+43-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:35:13-36
+44            android:label="AddFieldActivity"
+44-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:33:13-45
+45            android:theme="@style/Theme.Design.NoActionBar" >
+45-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:34:13-60
+46            <intent-filter>
+46-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:36:13-40:29
+47                <action android:name="om.hanna.agriculture.activity.AddFieldActivity" />
+47-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:37:17-89
+47-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:37:25-86
+48
+49                <category android:name="android.intent.category.DEFAULT" />
+49-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:28:17-76
+49-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:28:27-73
+50            </intent-filter>
+51        </activity>
+52        <activity
+52-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:42:9-52:20
+53            android:name="com.hanna.agriculture.activity.EditFieldActivity"
+53-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:43:13-76
+54            android:exported="true"
+54-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:46:13-36
+55            android:label="EditFieldActivity"
+55-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:44:13-46
+56            android:theme="@style/Theme.Design.NoActionBar" >
+56-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:45:13-60
+57            <intent-filter>
+57-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:47:13-51:29
+58                <action android:name="om.hanna.agriculture.activity.EditFieldActivity" />
+58-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:48:17-90
+58-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:48:25-87
+59
+60                <category android:name="android.intent.category.DEFAULT" />
+60-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:28:17-76
+60-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:28:27-73
+61            </intent-filter>
+62        </activity>
+63
+64        <meta-data
+64-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:53:9-55:57
+65            android:name="preloaded_fonts"
+65-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:54:13-43
+66            android:resource="@array/preloaded_fonts" />
+66-->C:\Users\annak\source\Agriculture\app\src\main\AndroidManifest.xml:55:13-54
+67
+68        <provider
+68-->[androidx.emoji2:emoji2:1.0.0] C:\Users\annak\.gradle\caches\transforms-3\b9027b92c1482b134488be162c33fb60\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+69            android:name="androidx.startup.InitializationProvider"
+69-->[androidx.emoji2:emoji2:1.0.0] C:\Users\annak\.gradle\caches\transforms-3\b9027b92c1482b134488be162c33fb60\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+70            android:authorities="com.hanna.agriculture.androidx-startup"
+70-->[androidx.emoji2:emoji2:1.0.0] C:\Users\annak\.gradle\caches\transforms-3\b9027b92c1482b134488be162c33fb60\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+71            android:exported="false" >
+71-->[androidx.emoji2:emoji2:1.0.0] C:\Users\annak\.gradle\caches\transforms-3\b9027b92c1482b134488be162c33fb60\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+72            <meta-data
+72-->[androidx.emoji2:emoji2:1.0.0] C:\Users\annak\.gradle\caches\transforms-3\b9027b92c1482b134488be162c33fb60\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+73                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+73-->[androidx.emoji2:emoji2:1.0.0] C:\Users\annak\.gradle\caches\transforms-3\b9027b92c1482b134488be162c33fb60\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+74                android:value="androidx.startup" />
+74-->[androidx.emoji2:emoji2:1.0.0] C:\Users\annak\.gradle\caches\transforms-3\b9027b92c1482b134488be162c33fb60\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+75            <meta-data
+75-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\annak\.gradle\caches\transforms-3\2244c9bd04f48de056c1159c637b1b8b\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+76                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+76-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\annak\.gradle\caches\transforms-3\2244c9bd04f48de056c1159c637b1b8b\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+77                android:value="androidx.startup" />
+77-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\annak\.gradle\caches\transforms-3\2244c9bd04f48de056c1159c637b1b8b\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+78        </provider>
+79    </application>
+80
+81</manifest>
