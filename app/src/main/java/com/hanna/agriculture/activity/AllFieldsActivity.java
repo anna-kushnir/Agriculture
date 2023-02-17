@@ -44,10 +44,10 @@ public class AllFieldsActivity extends AppCompatActivity implements Observer {
         field_list_controller.setFields(field_list_controller.getFields());
 
 
-        main_menu = (TextView) findViewById(R.id.main_menu);
-        fields_menu = (TextView) findViewById(R.id.fields_menu);
-        addField_button = (ImageButton) findViewById(R.id.addField_button);
-        fields_lv = (ListView) findViewById(R.id.fields_lv);
+        main_menu = findViewById(R.id.main_menu);
+        fields_menu = findViewById(R.id.fields_menu);
+        addField_button = findViewById(R.id.addField_button);
+        fields_lv = findViewById(R.id.fields_lv);
 
         main_menu.setOnClickListener(
                 this::mainActivity
@@ -60,6 +60,8 @@ public class AllFieldsActivity extends AppCompatActivity implements Observer {
         addField_button.setOnClickListener(
                 this::addFieldActivity
         );
+
+        fields_lv.setOnItemClickListener((parent, v, position, id) -> editFieldActivity(v, position));
     }
 
     public void addFieldActivity(View view) {
@@ -77,13 +79,14 @@ public class AllFieldsActivity extends AppCompatActivity implements Observer {
         startActivity(intent);
     }
 
-    public void editFieldActivity(View view) {
+    public void editFieldActivity(View view, int position) {
         Intent intent = new Intent(this, EditFieldActivity.class);
+        intent.putExtra("position", position);
         startActivity(intent);
     }
 
     public void update(){
-        fields_lv = (ListView) findViewById(R.id.fields_lv);
+        fields_lv = findViewById(R.id.fields_lv);
         adapter = new FieldActivityAdapter(this, field_list_controller.getFields());
         fields_lv.setAdapter(adapter);
         adapter.notifyDataSetChanged();

@@ -51,11 +51,11 @@ public class FieldActivityAdapter extends ArrayAdapter<Field> {
             convertView = inflater.from(context).inflate(R.layout.field_list_field, parent, false);
         }
 
-        TextView title_tv = (TextView) convertView.findViewById(R.id.title_tv);
-        TextView location_tv = (TextView) convertView.findViewById(R.id.location_tv);
-        TextView size_tv = (TextView) convertView.findViewById(R.id.size_tv);
-        TextView isSown_tv = (TextView) convertView.findViewById(R.id.isSown_tv);
-        ImageView photo = (ImageView) convertView.findViewById(R.id.image_view);
+        TextView title_tv = convertView.findViewById(R.id.title_tv);
+        TextView location_tv = convertView.findViewById(R.id.location_tv);
+        TextView size_tv = convertView.findViewById(R.id.size_tv);
+        TextView isSown_tv = convertView.findViewById(R.id.isSown_tv);
+        ImageView photo = convertView.findViewById(R.id.image_view);
 
         if (thumbnail != null) {
             photo.setImageBitmap(thumbnail);

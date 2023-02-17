@@ -2534,7 +2534,6 @@ id bounce
 id buttonPanel
 id cache_measures
 id cancel_button
-id cancel_image_button
 id categoryRecycler
 id categoryTitle
 id center
@@ -2575,6 +2574,7 @@ id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
 id delete_field_button
+id delete_image_button
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet

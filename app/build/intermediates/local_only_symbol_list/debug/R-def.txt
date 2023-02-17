@@ -32,11 +32,11 @@ id AgriTextView
 id CultureTextView
 id addField_button
 id add_image_button
-id cancel_image_button
 id categoryRecycler
 id categoryTitle
 id constraintLayout2
 id delete_field_button
+id delete_image_button
 id fields_lv
 id fields_menu
 id fields_title

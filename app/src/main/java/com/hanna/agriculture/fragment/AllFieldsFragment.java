@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+
 import com.hanna.agriculture.R;
 import com.hanna.agriculture.model.Field;
 
@@ -16,7 +18,7 @@ import java.util.ArrayList;
 public class AllFieldsFragment  extends FieldsFragment {
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         super.setVariables(R.layout.all_fields_activity, R.id.fields_lv);
         super.loadFields(AllFieldsFragment.this);

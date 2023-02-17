@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        main_menu = (TextView) findViewById(R.id.main_menu);
-        fields_menu = (TextView) findViewById(R.id.fields_menu);
+        main_menu = findViewById(R.id.main_menu);
+        fields_menu = findViewById(R.id.fields_menu);
 
         List<Category> categoryList = new ArrayList<>();
         categoryList.add(new Category(1, "Посів", ""));

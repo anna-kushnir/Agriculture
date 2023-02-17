@@ -1,0 +1,5 @@
+com.hanna.agriculture.test.app-androidTest-0 C:\Users\annak\source\Agriculture\app\build\generated\res\resValues\androidTest\debug
+com.hanna.agriculture.test.app-androidTest-1 C:\Users\annak\source\Agriculture\app\build\generated\res\rs\androidTest\debug
+com.hanna.agriculture.test.app-mergeDebugAndroidTestResources-2 C:\Users\annak\source\Agriculture\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.hanna.agriculture.test.app-mergeDebugAndroidTestResources-3 C:\Users\annak\source\Agriculture\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.hanna.agriculture.test.app-merged_res-4 C:\Users\annak\source\Agriculture\app\build\intermediates\merged_res\debugAndroidTest

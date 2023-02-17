@@ -8,9 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -40,7 +38,7 @@ public class EditFieldActivity extends AppCompatActivity implements Observer {
     private Context context;
 
     private Bitmap image;
-    private int REQUEST_CODE = 1;
+    private final int REQUEST_CODE = 1;
     private ImageView photo;
 
     private EditText title;
@@ -51,10 +49,10 @@ public class EditFieldActivity extends AppCompatActivity implements Observer {
     private EditText whatIsSown;
     private TextView whatIsSown_tv;
 
-    private ImageButton add_image_button;
-    private ImageButton cancel_image_button;
-    private Button delete_field_button;
-    private Button save_field_button;
+//    private ImageButton add_image_button;
+//    private ImageButton cancel_image_button;
+//    private Button delete_field_button;
+//    private Button save_field_button;
 
     private boolean on_create_update;
     private int pos;
@@ -62,7 +60,6 @@ public class EditFieldActivity extends AppCompatActivity implements Observer {
     private String title_str;
     private String location_str;
     private String size_str;
-    private boolean isSown_bln;
     private String whatIsSown_str;
 
     @Override
@@ -70,50 +67,35 @@ public class EditFieldActivity extends AppCompatActivity implements Observer {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_field);
 
-        title = (EditText) findViewById(R.id.title);
-        location = (EditText) findViewById(R.id.location);
-        size = (EditText) findViewById(R.id.size);
-        isSownYes = (RadioButton) findViewById(R.id.yesButton);
-        isSownNo = (RadioButton) findViewById(R.id.noButton);
-        whatIsSown = (EditText) findViewById(R.id.whatIsSown);
-        photo = (ImageView) findViewById(R.id.image_view);
-        whatIsSown_tv = (TextView) findViewById(R.id.whatIsSown_tv);
-
-        add_image_button = (ImageButton) findViewById(R.id.add_image_button);
-        cancel_image_button = (ImageButton) findViewById(R.id.cancel_image_button);
-        delete_field_button = (Button) findViewById(R.id.delete_field_button);
-        save_field_button = (Button) findViewById(R.id.save_field_button);
-
-        if (isSownYes.isChecked()) {
-            whatIsSown.setVisibility(View.VISIBLE);
-            whatIsSown_tv.setVisibility(View.VISIBLE);
-        }
-        else {
-            whatIsSown.setVisibility(View.INVISIBLE);
-            whatIsSown_tv.setVisibility(View.INVISIBLE);
-        }
+        title = findViewById(R.id.title);
+        location = findViewById(R.id.location);
+        size = findViewById(R.id.size);
+        isSownYes = findViewById(R.id.yesButton);
+        isSownNo = findViewById(R.id.noButton);
+        whatIsSown = findViewById(R.id.whatIsSown);
+        photo = findViewById(R.id.image_view);
+        whatIsSown_tv = findViewById(R.id.whatIsSown_tv);
 
         Intent intent = getIntent(); // Get intent from FieldsFragment
         pos = intent.getIntExtra("position", 0);
 
         context = getApplicationContext();
 
-        on_create_update = false; // Suppress first call to update()
+        on_create_update = true;
         field_list_controller.addObserver(this);
         field_list_controller.loadFields(context);
-
-        on_create_update = true;
-
-        on_create_update = false; // Suppress any further calls to update()
+        on_create_update = false;
     }
 
     @SuppressLint("QueryPermissionsNeeded")
     public void addPhoto(View view) {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            //noinspection deprecation
-            startActivityForResult(intent, REQUEST_CODE);
-        }
+        //noinspection deprecation
+        startActivityForResult(intent, REQUEST_CODE);
+//        if (intent.resolveActivity(getPackageManager()) != null) {
+//            //noinspection deprecation
+//            startActivityForResult(intent, REQUEST_CODE);
+//        }
     }
 
     public void deletePhoto(View view) {
@@ -124,9 +106,9 @@ public class EditFieldActivity extends AppCompatActivity implements Observer {
         }
     }
 
-    @SuppressLint("MissingSuperCall")
     @Override
     protected void onActivityResult(int request_code, int result_code, Intent intent) {
+        super.onActivityResult(request_code, result_code, intent);
         if (request_code == REQUEST_CODE && result_code == RESULT_OK) {
             Bundle extras = intent.getExtras();
             image = (Bitmap) extras.get("data");
@@ -138,6 +120,7 @@ public class EditFieldActivity extends AppCompatActivity implements Observer {
     @Override
     public void onBackPressed() {
         Intent main_intent = new Intent(this, AllFieldsActivity.class);
+        // main_intent.putExtra("user_id", user_id);
         startActivity(main_intent);
     }
 
@@ -166,7 +149,7 @@ public class EditFieldActivity extends AppCompatActivity implements Observer {
         title_str = title.getText().toString();
         location_str = location.getText().toString();
         size_str = size.getText().toString();
-        isSown_bln = isSownYes.isChecked();
+        boolean isSown_bln = isSownYes.isChecked();
         whatIsSown_str = whatIsSown.getText().toString();
 
         if(!validateInput()){
@@ -207,7 +190,16 @@ public class EditFieldActivity extends AppCompatActivity implements Observer {
             size.setText(field_controller.getSize().toString());
             isSownYes.setChecked(field_controller.isSown());
             isSownNo.setChecked(!field_controller.isSown());
-            whatIsSown.setText(field_controller.getWhatIsSown());
+
+            if (isSownYes.isChecked()) {
+                whatIsSown.setVisibility(View.VISIBLE);
+                whatIsSown_tv.setVisibility(View.VISIBLE);
+                whatIsSown.setText(field_controller.getWhatIsSown());
+            }
+            else {
+                whatIsSown.setVisibility(View.INVISIBLE);
+                whatIsSown_tv.setVisibility(View.INVISIBLE);
+            }
 
             image = field_controller.getImage();
             if (image != null) {

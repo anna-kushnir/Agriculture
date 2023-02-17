@@ -65,7 +65,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
-        android:layout_height="656dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
@@ -109,13 +109,15 @@
             android:id="@+id/fields_lv"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/addField_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fields_title"
-            tools:listitem="@layout/field_list_field" />
+            tools:listitem="@layout/field_list_field"
+            android:divider="@color/asideBgColor"
+            android:dividerHeight="2dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

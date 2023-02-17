@@ -16,7 +16,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.hanna.agriculture.R;
-import com.hanna.agriculture.controller.FieldController;
 import com.hanna.agriculture.controller.FieldListController;
 import com.hanna.agriculture.model.Field;
 import com.hanna.agriculture.model.FieldList;
@@ -47,31 +46,28 @@ public class AddFieldActivity extends AppCompatActivity {
     private String title_str;
     private String location_str;
     private String size_str;
-    private boolean isSown_bln;
     private String whatIsSown_str;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_add_field);
 
-        Intent intent = getIntent(); // Get intent from MainActivity
-
-        title = (EditText) findViewById(R.id.title);
-        location = (EditText) findViewById(R.id.location);
-        size = (EditText) findViewById(R.id.size);
-        isSownYes = (RadioButton) findViewById(R.id.yesButton);
-        isSownNo = (RadioButton) findViewById(R.id.noButton);
-        whatIsSown = (EditText) findViewById(R.id.whatIsSown);
-        photo = (ImageView) findViewById(R.id.image_view);
-        whatIsSown_tv = (TextView) findViewById(R.id.whatIsSown_tv);
+        title = findViewById(R.id.title);
+        location = findViewById(R.id.location);
+        size = findViewById(R.id.size);
+        isSownYes = findViewById(R.id.yesButton);
+        isSownNo = findViewById(R.id.noButton);
+        whatIsSown = findViewById(R.id.whatIsSown);
+        photo = findViewById(R.id.image_view);
+        whatIsSown_tv = findViewById(R.id.whatIsSown_tv);
 
         whatIsSown.setVisibility(View.INVISIBLE);
         whatIsSown_tv.setVisibility(View.INVISIBLE);
 
         photo.setImageResource(android.R.drawable.ic_menu_gallery);
 
+        Intent intent = getIntent(); // Get intent from MainActivity
         context = getApplicationContext();
         field_list_controller.loadFields(context);
     }
@@ -81,7 +77,7 @@ public class AddFieldActivity extends AppCompatActivity {
         title_str = title.getText().toString();
         location_str = location.getText().toString();
         size_str = size.getText().toString();
-        isSown_bln = isSownYes.isChecked();
+        boolean isSown_bln = isSownYes.isChecked();
         whatIsSown_str = whatIsSown.getText().toString();
 
         if(!validateInput()){
@@ -89,7 +85,7 @@ public class AddFieldActivity extends AppCompatActivity {
         }
 
         Field field = new Field(title_str, location_str, size_str, isSown_bln, whatIsSown_str, image, null);
-        FieldController field_controller = new FieldController(field);
+        // FieldController field_controller = new FieldController(field);
 
         boolean success = field_list_controller.addField(field, context);
         if (!success){
@@ -105,10 +101,12 @@ public class AddFieldActivity extends AppCompatActivity {
     @SuppressLint("QueryPermissionsNeeded")
     public void addPhoto(View view) {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            //noinspection deprecation
-            startActivityForResult(intent, REQUEST_CODE);
-        }
+        //noinspection deprecation
+        startActivityForResult(intent, REQUEST_CODE);
+//        if (intent.resolveActivity(getPackageManager()) != null) {
+//            //noinspection deprecation
+//            startActivityForResult(intent, REQUEST_CODE);
+//        }
     }
 
     public void deletePhoto(View view) {
@@ -126,8 +124,15 @@ public class AddFieldActivity extends AppCompatActivity {
             Bundle extras = intent.getExtras();
             image = (Bitmap) extras.get("data");
             photo.setImageBitmap(image);
+            Toast.makeText(context, "Фото додано.", Toast.LENGTH_SHORT).show();
         }
-        Toast.makeText(context, "Фото додано.", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent main_intent = new Intent(this, AllFieldsActivity.class);
+        // main_intent.putExtra("user_id", user_id);
+        startActivity(main_intent);
     }
 
     public boolean validateInput(){

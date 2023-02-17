@@ -36,7 +36,7 @@
             android:maxLength="24"
             android:textAppearance="@android:style/TextAppearance.Medium"
             android:textColorHint="#757575"
-            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck,TextContrastCheck" />
+            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck,TextContrastCheck,VisualLintTextFieldSize" />
 
     </LinearLayout>
 
@@ -54,7 +54,8 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:text="@string/location_hint"
-            android:textAppearance="@android:style/TextAppearance.Medium" />
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            tools:ignore="TextSizeCheck" />
 
         <EditText
             android:id="@+id/location"
@@ -66,7 +67,7 @@
             android:maxLength="24"
             android:textColorHint="#757575"
             android:textAppearance="@android:style/TextAppearance.Medium"
-            tools:ignore="TouchTargetSizeCheck,TextContrastCheck,DuplicateSpeakableTextCheck" />
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck,DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
 
     </LinearLayout>
 
@@ -96,7 +97,7 @@
             android:maxLength="24"
             android:textAppearance="@android:style/TextAppearance.Medium"
             android:textColorHint="#757575"
-            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck,TextContrastCheck" />
+            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck,TextContrastCheck,VisualLintTextFieldSize" />
 
     </LinearLayout>
 
@@ -135,7 +136,7 @@
                 android:layout_height="wrap_content"
                 android:onClick="isSownClickNo"
                 android:text="@string/no_hint"
-                tools:ignore="TouchTargetSizeCheck,UsingOnClickInXml" />
+                tools:ignore="TouchTargetSizeCheck,UsingOnClickInXml,VisualLintBounds" />
         </RadioGroup>
 
     </LinearLayout>
@@ -153,7 +154,8 @@
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:text="@string/whatIsSown_hint"
-            android:textAppearance="@android:style/TextAppearance.Medium" />
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            tools:ignore="TextSizeCheck" />
 
         <EditText
             android:id="@+id/whatIsSown"
@@ -164,7 +166,7 @@
             android:inputType="text"
             android:textColorHint="#757575"
             android:textAppearance="@android:style/TextAppearance.Medium"
-            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck,TextContrastCheck"
+            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck,TextContrastCheck,VisualLintTextFieldSize"
             android:importantForAutofill="no" />
 
     </LinearLayout>
@@ -201,7 +203,7 @@
 
 
         <ImageButton
-            android:id="@+id/cancel_image_button"
+            android:id="@+id/delete_image_button"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
@@ -219,7 +221,7 @@
             android:onClick="deleteField"
             android:text="@string/delete_field"
             android:textAppearance="@android:style/TextAppearance.Medium"
-            tools:ignore="UsingOnClickInXml" />
+            tools:ignore="UsingOnClickInXml,VisualLintButtonSize" />
 
     </LinearLayout>
 
@@ -240,7 +242,7 @@
             android:onClick="saveField"
             android:text="@string/save"
             android:textAppearance="@android:style/TextAppearance.Medium"
-            tools:ignore="UsingOnClickInXml" />
+            tools:ignore="UsingOnClickInXml,VisualLintButtonSize" />
 
     </LinearLayout>
 </LinearLayout>

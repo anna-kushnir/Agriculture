@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -56,7 +55,7 @@ public abstract class FieldsFragment extends Fragment implements Observer {
 
     public void setVariables(int resource, int id ) {
         rootView = inflater.inflate(resource, container, false);
-        list_view = (ListView) rootView.findViewById(id);
+        list_view = rootView.findViewById(id);
         selected_fields = filterFields();
     }
 
@@ -68,19 +67,15 @@ public abstract class FieldsFragment extends Fragment implements Observer {
 
     public void setFragmentOnFieldLongClickListener(){
         // When field is long clicked, this starts EditFieldActivity
-        list_view.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
+        list_view.setOnItemClickListener((parent, view, pos, id) -> {
+            Field field = adapter.getItem(pos);
 
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int pos, long id) {
-                Field field = adapter.getItem(pos);
+            int meta_pos = field_list_controller.getIndex(field);
+            if (meta_pos >= 0) {
 
-                int meta_pos = field_list_controller.getIndex(field);
-                if (meta_pos >= 0) {
-
-                    Intent edit = new Intent(context, EditFieldActivity.class);
-                    edit.putExtra("position", meta_pos);
-                    startActivity(edit);
-                }
+                Intent edit = new Intent(context, EditFieldActivity.class);
+                edit.putExtra("position", meta_pos);
+                startActivity(edit);
             }
         });
     }
@@ -101,7 +96,7 @@ public abstract class FieldsFragment extends Fragment implements Observer {
      */
     public void update(){
         if (update) {
-            selected_fields = filterFields(); // Ensure fieldsnk n  are filtered
+            selected_fields = filterFields(); // Ensure fields are filtered
             adapter = new FieldFragmentAdapter(context, selected_fields, fragment);
             list_view.setAdapter(adapter);
             adapter.notifyDataSetChanged();
